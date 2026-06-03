@@ -1,0 +1,87 @@
+{
+  "name": "@jwongart/openrouter-search",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin that provides independent OpenRouter Perplexity and X Search tools.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "author": "jwongart",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwong-art/openrouter-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jwong-art/openrouter-search/issues"
+  },
+  "homepage": "https://github.com/jwong-art/openrouter-search#readme",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "openrouter",
+    "openrouter-search",
+    "perplexity",
+    "perplexity-search",
+    "sonar-pro-search",
+    "xai",
+    "grok",
+    "x-search",
+    "twitter",
+    "web-search",
+    "research"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "plugin:build": "npm run build && openclaw plugins build --entry ./dist/index.js",
+    "plugin:validate": "npm run build && openclaw plugins validate --entry ./dist/index.js",
+    "test": "vitest run",
+    "prepublishOnly": "npm run plugin:build && npm run plugin:validate && npm test"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/perplexity.js",
+    "dist/perplexity.d.ts",
+    "dist/x-search.js",
+    "dist/x-search.d.ts",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.5.17"
+  },
+  "dependencies": {
+    "typebox": "^1.1.38"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "openclaw": "latest",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.5.17",
+      "minGatewayVersion": "2026.5.17"
+    },
+    "build": {
+      "openclawVersion": "2026.5.28",
+      "pluginSdkVersion": "2026.5.28"
+    },
+    "install": {
+      "npmSpec": "@jwongart/openrouter-search",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.5.17"
+    }
+  }
+}
