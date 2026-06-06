@@ -1,6 +1,6 @@
 {
   "name": "@jwongart/openrouter-search",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "OpenClaw plugin that provides independent OpenRouter Perplexity and X Search tools.",
   "type": "module",
   "main": "./dist/index.js",

@@ -10,7 +10,7 @@ Both tools consume OpenRouter credits and can work independently of OpenClaw's b
 ## Install
 
 ```bash
-openclaw plugins install npm:@jwongart/openrouter-search@0.1.0
+openclaw plugins install npm:@jwongart/openrouter-search@0.2.0
 ```
 
 ## Configuration

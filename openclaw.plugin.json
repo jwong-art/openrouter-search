@@ -2,7 +2,7 @@
   "id": "openrouter-search",
   "name": "@jwongart/openrouter-search",
   "description": "Provides independent OpenRouter search tools for Perplexity web search and Grok X Search. These tools consume OpenRouter credits and can work independently of OpenClaw's built-in web_search.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "configSchema": {
     "type": "object",
     "properties": {
